@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>area do terreno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <h1>area do terreno</h1>
+    <p>Realize area do terreno</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="/">Início</a></li>
+        <li><a href="/area do terreno">area do terreno</a></li>
+    </ul>
+</nav>
+<section>
+    <form method="POST">
+        <label> Lado 1:</label><br> 1:</label><br>
+        <input type="number" name="num1" step="any" required><br><br>
+
+        <label>Lado  2:</label><br>
+        <input type="number" name="num2" step="any" required><br><br>   
+        <button type="submit">CALCULAR</button>
+    </form>
+    {% if resultado is not none %}
+        <h2>Resultado: {{ resultado }}</h2>
+    {% endif %}
+</section>
+
+</body>
+</html>
